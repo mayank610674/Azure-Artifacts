@@ -22,3 +22,12 @@ steps:
     versionOption: custom
     versionPublish: '1.0.$(Build.BuildId)'
     packagePublishDescription: 'Published using Azure Pipeline'
+
+- task: UniversalPackages@0
+  displayName: Download Universal Package
+  inputs:
+    command: download
+    downloadDirectory: '$(Build.ArtifactStagingDirectory)/downloaded'
+    vstsFeedDownload: 'Project1/newfeed'   # Project-scoped feed
+    vstsFeedPackageDownload: 'cloudnautic-tools'
+    versionOption: latest
