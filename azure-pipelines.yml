@@ -17,7 +17,7 @@ steps:
   inputs:
     command: publish
     publishDirectory: '$(Build.ArtifactStagingDirectory)'
-    vstsFeedPublish: 'Project1/newfeed'
+    vstsFeedPublish: 'Project1/newfeed'   # Project-scoped feed
     vstsFeedPackagePublish: 'cloudnautic-tools'
     versionOption: custom
     versionPublish: '1.0.$(Build.BuildId)'
